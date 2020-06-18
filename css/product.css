@@ -100,4 +100,5 @@ div.image {
     border: 1px solid grey;
     margin-left: 2px;
     margin-bottom: 2px;
+    display: inline-grid;
 }
