@@ -50,7 +50,8 @@
       </div>
     </header>
     
-    <div class="container" id="content" style="overflow: hidden;">
+     <div class="container">
+       <div id="content" style="display: inline-box; margin-top: 10px;"></div>
     </div>
 
     <!-- Bootstrap core JavaScript

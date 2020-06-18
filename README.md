@@ -1,2 +1,3 @@
-# paintobrain
-Paint A Brain Project
+# Paint-o-Brain
+
+Draw your brain source code for website.

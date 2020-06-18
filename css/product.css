@@ -94,3 +94,10 @@ a.active circle {
     stroke-width: 3;
 }
 
+div.image {
+    width: 40px;
+    height: 40px;
+    border: 1px solid grey;
+    margin-left: 2px;
+    margin-bottom: 2px;
+}
