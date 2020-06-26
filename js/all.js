@@ -317,6 +317,12 @@ jQuery(document).ready(function() {
     });
 
     jQuery("a.save-drawing").on('click', function() {
+	// only save a drawing if its not empty
+	if (points.length < 2) {
+	    console.log("not enough points");
+	    return; 
+	}
+	
 	// we should save a png as well to be able to load the image faster
 	var canvas = document.getElementById("canvas");	
 	var canvasData = canvas.toDataURL("image/png");

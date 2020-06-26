@@ -25,7 +25,7 @@
           <div class="row">
             <div class="col-sm-8 col-md-7 py-4">
               <h4 class="text-white">About</h4>
-              <p class="text-muted">Instructions!</p>
+              <p class="text-muted">Here we show new drawings done by you. You can go back to <a href="paint.php">draw a better brain</a>. Or you can go <a href="/">back to the main page</a>.</p>
             </div>
             <div class="col-sm-4 offset-md-1 py-4">
               <h4 class="text-white">Contact</h4>
@@ -54,6 +54,10 @@
        <div id="content" style="display: inline-box; margin-top: 10px;"></div>
     </div>
 
+     <div class="in-large" style="display: none;">
+       <canvas id="canvas" width=800 height=800></canvas>
+     </div>
+     
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

@@ -1,7 +1,39 @@
+img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}
+
+
+div.image {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #EEE;
+    margin-left: 2px;
+    margin-bottom: 2px;
+    display: inline-grid;
+}
+
+.image {
+    overflow: hidden;
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}
 
 .container {
     max-width: 960px;
     height: 100%;
+}
+
+.in-large {
+    background-color: white;
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    top: 50%;
+    left: 50%;
+    margin: -300px 0 0 -400px;
 }
 
 /*
@@ -94,11 +126,3 @@ a.active circle {
     stroke-width: 3;
 }
 
-div.image {
-    width: 40px;
-    height: 40px;
-    border: 1px solid grey;
-    margin-left: 2px;
-    margin-bottom: 2px;
-    display: inline-grid;
-}

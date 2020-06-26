@@ -76,21 +76,62 @@ function randomColor(){
 //  return('#'+Math.floor(Math.random()*16777215).toString(16));
 }
 
-function startPlayback(file, d) {
-    jQuery.getJSON('pullImage.php', { 'image': file }, function(data) {
-	points = data;
-	beginRedrawing(d);
-    });
+function startPlayback(data, d) {
+    points = data;
+    beginRedrawing(d);
 }
 
+var ctx;
+var offsetX, offsetY;
 jQuery(document).ready(function() {
+    jQuery('#canvas')[0].getContext('2d');
+
+    var canvas=document.getElementById("canvas");
+    ctx=canvas.getContext("2d");
+    ctx.lineCap='round';
+    var cw=canvas.width;
+    var ch=canvas.height;
+    function reOffset(){
+	var BB=canvas.getBoundingClientRect();
+	offsetX=BB.left;
+	offsetY=BB.top;        
+    }
+    reOffset();
+    window.onscroll=function(e){ reOffset(); }
+    window.onresize=function(e){ reOffset(); }
 
     jQuery.getJSON("getListOfImages.php", function(data) {
 	// add an entry for each
 	for (var i = 0; i < data.length; i++) {
-	    jQuery('#content').append("<div class='image' id='" + data[i] + "'></div>");
-	    startPlayback(data[i], '#'+data[i]);
+	    var jp = data[i].replace(".txt",".png");
+	    jQuery('#content').append("<div class='image' id='" + data[i] + "'><img src='data/"+jp+"' alt='A brain'></img></div>");
+	    //startPlayback(data[i], '#'+data[i]);
 	}
+    });
+
+    jQuery('#content').on('click', 'div.image', function() {
+	// show in larger overlay
+	jQuery('div.in-large').show();
+	var d = jQuery(this).attr('id');
+	jQuery.getJSON('data/' + d, {}, function(data) {
+	    startPlayback(data, '#canvas');
+	});
+    });
+    jQuery('div.in-large').on('click', function() {
+	// clear the last drawing
+	points = [];
+	var canvas = document.getElementById("canvas");	
+	canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
+	
+	jQuery(this).hide();
+    });
+    jQuery('div.in-large').on('touchend', function() {
+	// clear the last drawing
+	points = [];
+	var canvas = document.getElementById("canvas");	
+	canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
+	
+	jQuery(this).hide();
     });
     
 });
