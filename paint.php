@@ -42,7 +42,7 @@
            <!--  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg> -->
             <strong>PYB</strong>
           </a>
-	  <a href="#" class="py-2 d-none d-sm-inline-block" color="black">
+	  <a href="#" class="py-2 d-none d-sm-inline-block" color="orange">
 	    <svg height="20" width="20"><circle cx="10" cy="10" r="8" stroke="white" stroke-width="2" fill="orange"/></svg>
 	  </a>
 	  <a href="#" class="py-2 d-none d-sm-inline-block" color="blue">
@@ -50,6 +50,9 @@
 	  </a>
 	  <a href="#" class="py-2 d-none d-sm-inline-block" color="green">
 	    <svg height="20" width="20"><circle cx="10" cy="10" r="8" stroke="white" stroke-width="2" fill="green"/></svg>
+	  </a>
+	  <a href="#" class="py-2 d-none d-sm-inline-block" color="white">
+	    <svg height="20" width="20"><circle cx="10" cy="10" r="8" stroke="white" stroke-width="2" fill="white"/></svg>
 	  </a>
 	  <a href="#" class="py-2 d-none d-sm-inline-block clear-drawing" title="Start again">Clear</a>
 	  <a href="#" class="py-2 d-none d-sm-inline-block save-drawing" title="Upload your drawing">Share</a>
@@ -64,7 +67,7 @@
     <div class="container" id="content" style="overflow: hidden;">
       <canvas id="canvas" width="960" height="600" style="margin-top: 5px;"></canvas>
       <div class="onscreen-interface" style="position: absolute; bottom: 20px; right: 20px;">
-	  <a href="#" class="" color="black">
+	  <a href="#" class="" color="orange">
 	    <svg height="20" width="20"><circle cx="10" cy="10" r="8" stroke="white" stroke-width="2" fill="orange"/></svg>
 	  </a>
 	  <a href="#" class="" color="blue">
@@ -72,6 +75,9 @@
 	  </a>
 	  <a href="#" class="" color="green">
 	    <svg height="20" width="20"><circle cx="10" cy="10" r="8" stroke="white" stroke-width="2" fill="green"/></svg>
+	  </a>
+	  <a href="#" class="" color="white">
+	    <svg height="20" width="20"><circle cx="10" cy="10" r="8" stroke="white" stroke-width="2" fill="white"/></svg>
 	  </a>
 	  <a href="#" class="clear-drawing" title="Start again">Clear</a>
 	  <a href="#" class="save-drawing" title="Upload your drawing">Share</a>
