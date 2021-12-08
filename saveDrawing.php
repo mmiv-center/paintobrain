@@ -1,6 +1,6 @@
 <?php
 
- $datadir = "/var/www/html/data";
+ $datadir = "data";
  $points = [];
  if (isset($_POST['points'])) {
     $points = json_decode($_POST['points'], TRUE);
